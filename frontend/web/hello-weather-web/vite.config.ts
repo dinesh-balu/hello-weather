@@ -9,5 +9,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    host: true,
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      'weather-access-app-tunnel-nzxphesz.devinapps.com',
+      '.devinapps.com'
+    ]
+  }
 })
 
