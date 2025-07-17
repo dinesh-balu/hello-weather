@@ -40,7 +40,7 @@ export default function App() {
   const [searchResults, setSearchResults] = useState<City[]>([]);
   const [selectedCities, setSelectedCities] = useState<string[]>(['New York', 'Mumbai']);
 
-  const API_BASE_URL = 'http://localhost:8000';
+  const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL || 'http://localhost:8000';
 
   useEffect(() => {
     if (selectedCities.length > 0) {
